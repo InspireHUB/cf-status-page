@@ -1,5 +1,4 @@
 import { getKVMonitors } from '$lib/functions/helpers.js';
-import kvJSON from './kv.json';
 
 export async function GET({ request, platform }) {
   if (platform?.env) {
