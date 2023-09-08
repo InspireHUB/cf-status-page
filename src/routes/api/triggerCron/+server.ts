@@ -1,7 +1,11 @@
 import { processCronTrigger } from '$lib/functions/cronTrigger';
 
-export async function POST({ platform }) {
+export async function POST({ platform, request }) {
   if (platform?.env) {
+    const auth = request.headers.get('Authorization');
+    if (platform.env.AUTH_TOKEN !== auth) {
+      return new Response('unauthorized', { status: 401 });
+    }
     try {
       const checkDay = await processCronTrigger(platform.env);
       return new Response(`triggered event OK: ${checkDay}`);
