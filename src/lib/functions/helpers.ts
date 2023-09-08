@@ -79,7 +79,6 @@ export async function notifySlack(env: ENV, monitor: App.MonitorConfig, operatio
 
 export async function notifyTelegram(env: ENV, monitor: App.MonitorConfig, operational: boolean) {
   if (!env.SECRET_TELEGRAM_CHAT_ID) {
-    console.error('SECRET_TELEGRAM_CHAT_ID is not set');
     return;
   }
   const text = `Monitor *${monitor.name.replaceAll(
