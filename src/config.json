@@ -17,13 +17,137 @@
   },
   "monitors": [
     {
-      "id": "build-ihub-app",
-      "name": "build.ihub.app",
-      "description": "",
-      "url": "https://build.ihub.app/",
-      "method": "GET",
-      "expectStatus": 200,
-      "followRedirect": true
+      "id":"au-api",
+      "name": "Australia API",
+      "url":"https://au-ih-api-et.azurewebsites.net/health",
+      "method":"GET",
+      "expectStatus":200
+    },
+    {
+      "id":"au-app",
+      "name": "Australia IHUBApp",
+      "url":"https://au-ih-app-et.azurewebsites.net/health",
+      "method":"GET",
+      "expectStatus":200
+    },
+    {
+      "id":"au-build",
+      "name": "Australia builder",
+      "url":"https://au-ih-bld-et.azurewebsites.net/health",
+      "method":"GET",
+      "expectStatus":200
+    },
+    {
+      "id":"au-bridge",
+      "name": "Australia bridge",
+      "url":"https://au-ih-brg-et.azurewebsites.net/health",
+      "method":"GET",
+      "expectStatus":200
+    },
+    {
+      "id":"ca-api",
+      "name": "Canada API",
+      "url":"https://ca-ih-api-et.azurewebsites.net/health",
+      "method":"GET",
+      "expectStatus":200
+    },
+    {
+      "id":"ca-app",
+      "name": "Canada IHUBApp",
+      "url":"https://ca-ih-app-et.azurewebsites.net/health",
+      "method":"GET",
+      "expectStatus":200
+    },
+    {
+      "id":"ca-build",
+      "name": "Canada builder",
+      "url":"https://ca-ih-bld-et.azurewebsites.net/health",
+      "method":"GET",
+      "expectStatus":200
+    },
+    {
+      "id":"ca-bridge",
+      "name": "Canada bridge",
+      "url":"https://ca-ih-brg-et.azurewebsites.net/health",
+      "method":"GET",
+      "expectStatus":200
+    },
+    {
+      "id":"us-api",
+      "name": "United states API",
+      "url":"https://us-ih-api-et.azurewebsites.net/health",
+      "method":"GET",
+      "expectStatus":200
+    },
+    {
+      "id":"us-app",
+      "name": "United states IHUBApp",
+      "url":"https://us-ih-app-et.azurewebsites.net/health",
+      "method":"GET",
+      "expectStatus":200
+    },
+    {
+      "id":"us-build",
+      "name": "United states builder",
+      "url":"https://us-ih-bld-et.azurewebsites.net/health",
+      "method":"GET",
+      "expectStatus":200
+    },
+    {
+      "id":"us-bridge",
+      "name": "United states bridge",
+      "url":"https://us-ih-brg-et.azurewebsites.net/health",
+      "method":"GET",
+      "expectStatus":200
+    },
+    {
+      "id":"sc-api",
+      "name": "Scranton API",
+      "url":"https://sc-ih-api-et.azurewebsites.net/health",
+      "method":"GET",
+      "expectStatus":200
+    },
+    {
+      "id":"sc-app",
+      "name": "Scranton IHUBApp",
+      "url":"https://sc-ih-app-et.azurewebsites.net/health",
+      "method":"GET",
+      "expectStatus":200
+    },
+    {
+      "id":"sc-build",
+      "name": "Scranton builder",
+      "url":"https://sc-ih-bld-et.azurewebsites.net/health",
+      "method":"GET",
+      "expectStatus":200
+    },
+    {
+      "id":"sc-bridge",
+      "name": "Scranton bridge",
+      "url":"https://sc-ih-brg-et.azurewebsites.net/health",
+      "method":"GET",
+      "expectStatus":200
+    },
+    {
+      "id":"us-demux",
+      "name": "Demux",
+      "url":"https://demux.inspirehub.com",
+      "method":"GET",
+      "expectStatus":200
+    },
+    {
+      "id":"us-matomo",
+      "name": "Matomo",
+      "url":"https://matomo.inspirehub.com",
+      "method":"GET",
+      "expectStatus":200
+    },
+    {
+      "id":"us-prerender",
+      "name": "Prerender",
+      "url":"https://us-ih-pre-et.azurewebsites.net/prerender?url=https://devteamrocks.ihub.app",
+      "method":"GET",
+      "expectStatus":200
     }
   ]
 }
