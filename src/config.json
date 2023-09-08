@@ -47,28 +47,28 @@
     {
       "id":"ca-api",
       "name": "Canada API",
-      "url":"https://ca-ih-api-et.azurewebsites.net/health",
+      "url":"https://ca-ih-api-ct.azurewebsites.net/health",
       "method":"GET",
       "expectStatus":200
     },
     {
       "id":"ca-app",
       "name": "Canada IHUBApp",
-      "url":"https://ca-ih-app-et.azurewebsites.net/health",
+      "url":"https://ca-ih-app-ct.azurewebsites.net/health",
       "method":"GET",
       "expectStatus":200
     },
     {
       "id":"ca-build",
       "name": "Canada builder",
-      "url":"https://ca-ih-bld-et.azurewebsites.net/health",
+      "url":"https://ca-ih-bld-ct.azurewebsites.net/health",
       "method":"GET",
       "expectStatus":200
     },
     {
       "id":"ca-bridge",
       "name": "Canada bridge",
-      "url":"https://ca-ih-brg-et.azurewebsites.net/health",
+      "url":"https://ca-ih-brg-ct.azurewebsites.net/health",
       "method":"GET",
       "expectStatus":200
     },
@@ -103,28 +103,28 @@
     {
       "id":"sc-api",
       "name": "Scranton API",
-      "url":"https://sc-ih-api-et.azurewebsites.net/health",
+      "url":"https://sc-ih-api-ct.azurewebsites.net/health",
       "method":"GET",
       "expectStatus":200
     },
     {
       "id":"sc-app",
       "name": "Scranton IHUBApp",
-      "url":"https://sc-ih-app-et.azurewebsites.net/health",
+      "url":"https://sc-ih-app-ct.azurewebsites.net/health",
       "method":"GET",
       "expectStatus":200
     },
     {
       "id":"sc-build",
       "name": "Scranton builder",
-      "url":"https://sc-ih-bld-et.azurewebsites.net/health",
+      "url":"https://sc-ih-bld-ct.azurewebsites.net/health",
       "method":"GET",
       "expectStatus":200
     },
     {
       "id":"sc-bridge",
       "name": "Scranton bridge",
-      "url":"https://sc-ih-brg-et.azurewebsites.net/health",
+      "url":"https://sc-ih-brg-ct.azurewebsites.net/health",
       "method":"GET",
       "expectStatus":200
     },
