@@ -10,6 +10,7 @@ declare global {
     interface Platform {
       env: {
         KV_STATUS_PAGE: KVNamespace;
+        SECRET_SLACK_WEBHOOK_URL?: string;
         SECRET_TELEGRAM_CHAT_ID?: string;
         SECRET_TELEGRAM_API_TOKEN?: string;
       };

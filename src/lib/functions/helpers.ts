@@ -31,45 +31,51 @@ async function setKV(
   return env.KV_STATUS_PAGE.put(key, value, { metadata, expirationTtl });
 }
 
-// export async function notifySlack(monitor, operational) {
-//   const payload = {
-//     attachments: [
-//       {
-//         fallback: `Monitor ${monitor.name} changed status to ${getOperationalLabel(operational)}`,
-//         color: operational ? '#36a64f' : '#f2c744',
-//         blocks: [
-//           {
-//             type: 'section',
-//             text: {
-//               type: 'mrkdwn',
-//               text: `Monitor *${
-//                 monitor.name
-//               }* changed status to *${getOperationalLabel(operational)}*`,
-//             },
-//           },
-//           {
-//             type: 'context',
-//             elements: [
-//               {
-//                 type: 'mrkdwn',
-//                 text: `${operational ? ':white_check_mark:' : ':x:'} \`${
-//                   monitor.method ? monitor.method : 'GET'
-//                 } ${monitor.url}\` - :eyes: <${
-//                   config.settings.url
-//                 }|Status Page>`,
-//               },
-//             ],
-//           },
-//         ],
-//       },
-//     ],
-//   }
-//   return fetch(SECRET_SLACK_WEBHOOK_URL, {
-//     body: JSON.stringify(payload),
-//     method: 'POST',
-//     headers: { 'Content-Type': 'application/json' },
-//   })
-// }
+export async function notifySlack(env: ENV, monitor: App.MonitorConfig, operational: boolean) {
+  const SECRET_SLACK_WEBHOOK_URL = await env.KV_STATUS_PAGE.get('SECRET_SLACK_WEBHOOK_URL', 'text');
+  if (!SECRET_SLACK_WEBHOOK_URL) {
+    console.error('SECRET_SLACK_WEBHOOK_URL is not set');
+    return;
+  }
+
+  const payload = {
+    attachments: [
+      {
+        fallback: `Monitor ${monitor.name} changed status to ${getOperationalLabel(operational)}`,
+        color: operational ? '#36a64f' : '#f2c744',
+        blocks: [
+          {
+            type: 'section',
+            text: {
+              type: 'mrkdwn',
+              text: `Monitor *${
+                monitor.name
+              }* changed status to *${getOperationalLabel(operational)}*`,
+            },
+          },
+          {
+            type: 'context',
+            elements: [
+              {
+                type: 'mrkdwn',
+                text: `${operational ? ':white_check_mark:' : ':x:'} \`${
+                  monitor.method ? monitor.method : 'GET'
+                } ${monitor.url}\` - :eyes: <${
+                  config.settings.url
+                }|Status Page>`,
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  }
+  return fetch(SECRET_SLACK_WEBHOOK_URL, {
+    body: JSON.stringify(payload),
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+  })
+}
 
 export async function notifyTelegram(env: ENV, monitor: App.MonitorConfig, operational: boolean) {
   if (!env.SECRET_TELEGRAM_CHAT_ID) {

@@ -5,7 +5,7 @@ import {
   getCheckLocation,
   getKVMonitors,
   // notifyDiscord,
-  // notifySlack,
+  notifySlack,
   notifyTelegram,
   setKVMonitors
 } from './helpers';
@@ -68,16 +68,15 @@ export async function processCronTrigger(env: App.Platform['env']) {
       operational: monitorOperational
     };
 
-    /* TODO: notify adapters
     // Send Slack message on monitor change
     if (
       monitorStatusChanged &&
-      typeof SECRET_SLACK_WEBHOOK_URL !== 'undefined' &&
-      SECRET_SLACK_WEBHOOK_URL !== 'default-gh-action-secret'
+      env.SECRET_SLACK_WEBHOOK_URL !== 'undefined'
     ) {
-      event.waitUntil(notifySlack(monitor, monitorOperational))
+      await notifySlack(env, monitor, monitorOperational);
     }
 
+    /* TODO: notify adapters
     // Send Discord message on monitor change
     if (
       monitorStatusChanged &&
