@@ -29,7 +29,7 @@
   <div class="container px-4 mx-auto">
     <div class="flex flex-row items-center justify-between p-4">
       <div class="flex flex-row items-center">
-        <img class="w-auto h-8" src={config.settings.logo} alt="Logo" />
+        <img class="h-8" width="130" height="32" src={config.settings.logo} alt="Logo" />
         <h1 class="ml-4 text-3xl">{config.settings.title}</h1>
       </div>
       <div class="flex flex-row items-center">
@@ -43,16 +43,5 @@
       <MonitorCard {monitor} data={monitors[monitor.id]} />
     {/each}
 
-    <div class="flex flex-row justify-between mt-4 text-sm">
-      <div>
-        Powered by
-        <a class="ml-1" href="https://workers.cloudflare.com/" target="_blank">
-          Cloudflare Workers
-        </a>
-      </div>
-      <div>
-        <a href="https://github.com/kxxoling/cf-status-page" target="_blank"> Get Your Status Page </a>
-      </div>
-    </div>
   </div>
 </div>

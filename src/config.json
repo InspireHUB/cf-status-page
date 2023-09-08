@@ -1,8 +1,8 @@
 {
   "settings": {
-    "title": "IHUB Status Page",
+    "title": "IHUBApp Status Page",
     "url": "https://status.ihub.app",
-    "logo": "https://ih-cdn.ihub.app/img/ihub-logo-32px.png",
+    "logo": "https://ih-cdn.ihub.app/img/ihubapplogo-32px.png",
     "daysInHistogram": 90,
     "collectResponseTimes": true,
     "allMonitorsOperational": "All Systems Operational",
