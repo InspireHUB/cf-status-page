@@ -145,5 +145,5 @@ export async function processCronTrigger(env: App.Platform['env']) {
   await setKVMonitors(env, monitorsState);
 
   // return new Response('OK')
-  return `${checkDay} {new Date().toISOString()}`;
+  return `${checkDay} ${new Date().toISOString()}`;
 }
