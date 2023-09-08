@@ -15,7 +15,7 @@ export async function GET({ request, platform }) {
     }
   }
 
-  return new Response(JSON.stringify(kvJSON), {
+  return new Response(JSON.stringify({ firstCheck: null, lastCheck:{}, monitors: {} }), {
     headers: {
       'content-type': 'application/json'
     }
