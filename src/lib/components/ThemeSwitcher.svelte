@@ -15,17 +15,6 @@
       localStorage.theme = 'dark';
     }
   }
-
-  onMount(() => {
-    // FIXME: should be something like beforeMount
-    if (localStorage.theme === 'dark') {
-      window.document.documentElement.classList.add('dark');
-      darkMode = true;
-    } else {
-      window.document.documentElement.classList.remove('dark');
-      darkMode = false;
-    }
-  });
 </script>
 
 <button
