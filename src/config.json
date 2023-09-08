@@ -82,7 +82,7 @@
     {
       "id":"us-app",
       "name": "United states IHUBApp",
-      "url":"https://us-ih-app-et.azurewebsites.net/health",
+      "url":"https://ihubgo.com/health",
       "method":"GET",
       "expectStatus":200
     },
@@ -101,16 +101,9 @@
       "expectStatus":200
     },
     {
-      "id":"sc-api",
-      "name": "Scranton API",
-      "url":"https://sc-ih-api-ct.azurewebsites.net/health",
-      "method":"GET",
-      "expectStatus":200
-    },
-    {
       "id":"sc-app",
       "name": "Scranton IHUBApp",
-      "url":"https://sc-ih-app-ct.azurewebsites.net/health",
+      "url":"https://sc-ih-app-ct.azurewebsites.net/account/login",
       "method":"GET",
       "expectStatus":200
     },
