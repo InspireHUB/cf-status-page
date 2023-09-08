@@ -15,6 +15,14 @@
       localStorage.theme = 'dark';
     }
   }
+
+  onMount(() => {
+    if (localStorage.theme === 'dark') {
+      darkMode = true;
+    } else {
+      darkMode = false;
+    }
+  });
 </script>
 
 <button
